@@ -1,6 +1,8 @@
 site_name: Bliss OS Documentation
 repo_name: BlissOS/Documentation
 repo_url: https://github.com/BlissRoms-x86/Documentation
+site_url: https://hmtheboy154.github.io/Documentation/
+site_description: "The official knowledge base for BlissOS. Learn how to install, configure, and optimize your Android on desktop experience."
 theme:
   name: material
   favicon: assets/images/favicon.png
@@ -24,7 +26,10 @@ theme:
     annotation: material/plus-circle
   features:
     - navigation.indexes
+    - navigation.instant.preview
+    - navigation.tabs
     - navigation.top
+    - navigation.path
     - toc.integrate
     - content.code.copy
     - content.code.annotate
@@ -53,7 +58,7 @@ extra:
       link: https://t.me/blissx86
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/F9n5gbdNy2
-copyright: Copyright © 2013 - 2025 BlissLabs
+copyright: Copyright © 2013 - 2026 BlissLabs
 nav:
   - Main Page: README.md
   - Installation guide:
@@ -63,16 +68,30 @@ nav:
       - Manual Setup:
           - The basics: installation/manual/the-basics.md
           - Setup Linux's GRUB2: installation/manual/setup-linux-grub2.md
-          - Setup rEFInd: installation/manual/setup-refind.md
       - Install on a Virtual Machine: installation/vm.md
   - Configuration:
       - configuration/README.md
-      - Calibrate and configure iptsd: configuration/calibrate-configure-iptsd.md
+      - Audio: configuration/audio.md
+      - Display & Graphics:
+        - configuration/display-graphics/README.md
+        - Mesa Configuration: configuration/display-graphics/mesa3d.md
+        - Hardware-specifics quirks:
+          - Intel GPUs: configuration/display-graphics/intel.md
+          - AMD GPUs: configuration/display-graphics/amd-radeon.md
+          - Nvidia GPUs: configuration/display-graphics/nvidia.md
+          - VirGL: configuration/display-graphics/virtio.md
+          - VMWare SVGA: configuration/display-graphics/vmware.md
+      - Media codecs: configuration/media-codecs.md
+      - Sensors: configuration/sensors.md
+      - Touchscreen:
+        - Calibrate and configure iptsd: configuration/touchscreens/calibrate-configure-iptsd.md
+        - Calibrate and configure silead touchscreens: configuration/touchscreens/calibrate-configure-silead.md
+      - Grant superuser permission or debug shell: configuration/grantsu.md
       - Preparing a Virtual Machine: configuration/vm-setup.md
       - Pseudo fstab: configuration/pseudo-filesystem-table.md
       - Setup kernel's cmdline parameters: configuration/kernel-parameters.md
       - Recovery Mode: configuration/recovery.md
-      - Granting super user permission: configuration/grantsu.md
+      - Making Panda/Mantis keymapper work: configuration/arm-keymapper-hack.md
   - Knowledgebase:
       - knowledgebase/README.md
       - Hardware Requirements: knowledgebase/hardware-requirement.md
@@ -81,15 +100,19 @@ nav:
           - BlissOS Go: knowledgebase/other-bliss-variant/go-builds.md
           - BlissOS for Surface devices: knowledgebase/other-bliss-variant/surface-builds.md
           - BlissOS Zenith: knowledgebase/other-bliss-variant/zenith-builds.md
-      - Compatibility List: knowledgebase/compatibility-list.md
+      - Difference with BlissRoms: knowledgebase/difference-with-blissroms.md
+      - Graphics options explanation: knowledgebase/graphics-explain.md
       - Pseudo filesystem table: knowledgebase/pseudo-filesystem-table.md
       - Userdata options: knowledgebase/userdata-options.md
       - BlissOS' kernel parameters cheat sheets: knowledgebase/kernel-parameters-cheat-sheet.md
+      - External resources: knowledgebase/external-resources.md
+      - Compatibility List: knowledgebase/compatibility-list.md
   - Development:
       - development/README.md
       - Maintaining Proper Authorship: development/maintaining-proper-authorship.md
       - Obtain the Source Code: development/obatain-source-and-build.md
       - Porting Linux Drivers: development/porting-linux-drivers.md
+      - Contribute to the Documentation: development/contribute-to-the-documentation.md
   - Feedback:
       - feedback/README.md
       - Github Issues: feedback/github-issue.md
@@ -101,3 +124,10 @@ plugins:
   - glightbox
   - search
   - table-reader
+  - social:
+      cards_layout: default/variant
+      cards_layout_options:
+        font_family: Google Sans Flex
+        background_color: "#18001a"
+        color: "#e9c6f0"
+        logo: assets_main/blissos.svg

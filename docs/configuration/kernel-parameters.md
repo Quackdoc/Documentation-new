@@ -11,7 +11,7 @@ Beside inheriting all the [command-line parameters](https://www.kernel.org/doc/h
 You can edit the command-line parameters from inside BlissOS. You'll need a terminal emulator with root permissions (su) and a command-line based text editor to do this.
 Since Termux, KernelSU and nano are available in BlissOS, we'll use them for these examples below.
 
-> Note: See [Granting su permission](../configuration/grantsu.md) for how to grant `su` permission to apps from KernelSU.
+> Note: See [Grant superuser permission or debug shell](grantsu.md) for how to grant `su` permission to apps from KernelSU.
 
 ### Using GRUB
 
@@ -24,7 +24,7 @@ For example, using `nano`:
 su -c 'nano /boot/grub/android.cfg'
 ```
 
-![](../assets/images/install/cmdline.png){ width="500" }
+![](../assets/images/manual/edit_conf_grub_termux.png){ width="500" }
 
 
 ### Using rEFInd
@@ -38,7 +38,7 @@ For example, using `nano`:
 su -c 'nano /boot/efi/EFI/refind/android.conf'
 ```
 
-![](../assets/images/install/cmdline.png){ width="500" }
+![](../assets/images/manual/edit_conf_refind_termux.png){ width="500" }
 
 ### Without bootloader
 
@@ -116,7 +116,7 @@ mount /dev/sdXY /mnt
 nano /mnt/boot/grub/android.cfg
 ```
 
-![](../assets/images/install/cmdline.png){ width="500" }
+![](../assets/images/manual/edit_conf_grub_linux.png){ width="500" }
 
 ### For BlissOS with rEFInd
 
@@ -132,7 +132,7 @@ mount /dev/sdXY /mnt
 nano /mnt/EFI/refind/android.conf
 ```
 
-![](../assets/images/install/cmdline.png){ width="500" }
+![](../assets/images/manual/edit_conf_refind_linux.png){ width="500" }
 
 ### For BlissOS with no bootloader
 

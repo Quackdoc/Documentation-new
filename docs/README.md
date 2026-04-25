@@ -6,8 +6,6 @@ icon: material/home
 
 Welcome to the [BlissOS](https://blissos.org) Documentation, your main source of information for everything related to the project. We hope you can find all the answers you're looking for in this page\!
 
-To start, check out the sidebar on the left for Table of contents
-
 ## But what is BlissOS ?
 
 It's surprising you'd ask, given that you're already on the Documentation page! [BlissOS](https://blissos.org) is an operating system built on the [Android Open Source Project](https://source.android.com/). Developed by our team at [BlissLabs](https://blisslabs.org/), it's packed with a wide range of customization options and features to deliver an exceptional Android experience on PCs.
